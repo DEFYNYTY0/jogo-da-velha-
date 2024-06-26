@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Jogo da velha</title>
+  </head>
+  <body>
+    <div class="painel">
+      <div class="esquerda">
+       <span id="jogadores"></span>
+
+        <table class="jogo" border="2">
+          <tr>
+            <td class="quadrado" onclick="jogar(this)" id="q1"></td>
+            <td class="quadrado" onclick="jogar(this)" id="q2"></td>
+            <td class="quadrado" onclick="jogar(this)" id="q1"></td>
+          </tr>
+
+          <tr>
+            <td class="quadrado" onclick="jogar(this)" id="q2"></td>
+            <td class="quadrado" onclick="jogar(this)" id="q1"></td>
+            <td class="quadrado" onclick="jogar(this)" id="q2"></td>
+          </tr>
+
+          <tr>
+            <td class="quadrado" onclick="jogar(this)" id="q1"></td>
+            <td class="quadrado" onclick="jogar(this)" id="q2"></td>
+            <td class="quadrado" onclick="jogar(this)" id="q1"></td>
+          </tr>
+        </table>
+        <button onclick="reiniciar()">reiniciar</button>
+        <button onclick="window.close">fechar</button>
+        <button onclick="gerarBatalha()">Gerar Batalha</button>
+      </div>
+      <div class="direita">
+        <input type="text" id="nome" placeholder="Insira um nome"> 
+        <button onclick="adicionar()">Adicionar</button>
+       
+        <ul id="lista">
+
+        </ul>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
